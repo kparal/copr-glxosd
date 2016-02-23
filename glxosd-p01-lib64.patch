@@ -1,0 +1,82 @@
+diff --git a/src/elfhacks/CMakeLists.txt b/src/elfhacks/CMakeLists.txt
+index da9c820..b418e19 100644
+--- a/src/elfhacks/CMakeLists.txt
++++ b/src/elfhacks/CMakeLists.txt
+@@ -1,3 +1,4 @@
++include(GNUInstallDirs)
+ set(ELFHACKS_VERSION_MAJOR 1)
+ set(ELFHACKS_VERSION_MINOR 0)
+ set(ELFHACKS_VERSION_PATCH 1)
+@@ -8,5 +9,5 @@ set_target_properties(elfhacks PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_DIR}
+ set_target_properties(elfhacks PROPERTIES VERSION ${ELFHACKS_VERSION_STRING}
+                                           SOVERSION ${ELFHACKS_VERSION_MAJOR})
+ INSTALL(TARGETS elfhacks
+-  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
+ )
+diff --git a/src/glinject/CMakeLists.txt b/src/glinject/CMakeLists.txt
+index 9a26bb6..f940ff5 100644
+--- a/src/glinject/CMakeLists.txt
++++ b/src/glinject/CMakeLists.txt
+@@ -1,3 +1,4 @@
++include(GNUInstallDirs)
+ set(GLINJECT_VERSION_MAJOR 2)
+ set(GLINJECT_VERSION_MINOR 2)
+ set(GLINJECT_VERSION_PATCH 1)
+@@ -9,5 +10,5 @@ set_target_properties(glinject PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_DIR}
+ set_target_properties(glinject PROPERTIES VERSION ${GLINJECT_VERSION_STRING}
+                                           SOVERSION ${GLINJECT_VERSION_MAJOR})
+ INSTALL(TARGETS glinject
+-  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
+-)
+\ No newline at end of file
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++)
+diff --git a/src/glxosd-libsensors-support/CMakeLists.txt b/src/glxosd-libsensors-support/CMakeLists.txt
+index 5c010bc..55c7904 100644
+--- a/src/glxosd-libsensors-support/CMakeLists.txt
++++ b/src/glxosd-libsensors-support/CMakeLists.txt
+@@ -1,3 +1,4 @@
++include(GNUInstallDirs)
+ SET(GLXOSD_LIBSENSORS_SUPPORT_SOURCE_FILES LibsensorsSensorDataProvider.cpp)
+ add_library(glxosd-libsensors-support SHARED ${GLXOSD_LIBSENSORS_SUPPORT_SOURCE_FILES})
+ add_dependencies(glxosd-libsensors-support glxosd)
+@@ -6,5 +7,5 @@ set_target_properties(glxosd-libsensors-support PROPERTIES LIBRARY_OUTPUT_DIRECT
+ set_target_properties(glxosd-libsensors-support PROPERTIES VERSION ${GLXOSD_VERSION_STRING}
+                                           SOVERSION ${GLXOSD_VERSION_MAJOR})
+ INSTALL(TARGETS glxosd-libsensors-support
+-  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
+ )
+diff --git a/src/glxosd-nvidia-support/CMakeLists.txt b/src/glxosd-nvidia-support/CMakeLists.txt
+index 4ec9faa..2362ca6 100644
+--- a/src/glxosd-nvidia-support/CMakeLists.txt
++++ b/src/glxosd-nvidia-support/CMakeLists.txt
+@@ -1,3 +1,4 @@
++include(GNUInstallDirs)
+ SET(GLXOSD_NVIDIA_SUPPORT_SOURCE_FILES NvidiaSensorDataProvider.cpp)
+ add_library(glxosd-nvidia-support SHARED ${GLXOSD_NVIDIA_SUPPORT_SOURCE_FILES})
+ add_dependencies(glxosd-nvidia-support glxosd)
+@@ -6,5 +7,5 @@ set_target_properties(glxosd-nvidia-support PROPERTIES LIBRARY_OUTPUT_DIRECTORY
+ set_target_properties(glxosd-nvidia-support PROPERTIES VERSION ${GLXOSD_VERSION_STRING}
+                                           SOVERSION ${GLXOSD_VERSION_MAJOR})
+ INSTALL(TARGETS glxosd-nvidia-support
+-  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
+ )
+diff --git a/src/glxosd/CMakeLists.txt b/src/glxosd/CMakeLists.txt
+index 4cbeb1e..1ca7315 100644
+--- a/src/glxosd/CMakeLists.txt
++++ b/src/glxosd/CMakeLists.txt
+@@ -1,3 +1,4 @@
++include(GNUInstallDirs)
+ set(GLXOSD_SOURCE_FILES GLXOSD.cpp GLXOSDLoader.cpp OSDInstance.cpp ConfigurationManager.cpp Utils.cpp GLAttribState.cpp FontRenderer.cpp ShaderProgram.cpp VertexBuffer.cpp Colour.cpp)
+ add_library(glxosd SHARED ${GLXOSD_SOURCE_FILES})
+ add_dependencies(glxosd glinject)
+@@ -6,5 +7,5 @@ set_target_properties(glxosd PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_DIR} L
+ set_target_properties(glxosd PROPERTIES VERSION ${GLXOSD_VERSION_STRING}
+                                           SOVERSION ${GLXOSD_VERSION_MAJOR})
+ INSTALL(TARGETS glxosd
+-  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
+ )
