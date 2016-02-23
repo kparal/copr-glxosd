@@ -1,3 +1,4 @@
+# fix CMakeLists.txt to install to /usr/lib64 instead of /usr/lib
 diff --git a/src/elfhacks/CMakeLists.txt b/src/elfhacks/CMakeLists.txt
 index da9c820..b418e19 100644
 --- a/src/elfhacks/CMakeLists.txt
