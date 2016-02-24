@@ -12,6 +12,7 @@ License:  MIT
 URL:      https://glxosd.nickguletskii.com/
 Source0:  https://github.com/nickguletskii/GLXOSD/archive/%{commit}/%{name}-%{version}-%{gitdate}git%{githash}.tar.gz
 
+# fix CMakeLists.txt to install to /usr/lib64 instead of /usr/lib
 Patch1:   %{name}-p01-lib64.patch
 
 BuildRequires:  gcc-c++

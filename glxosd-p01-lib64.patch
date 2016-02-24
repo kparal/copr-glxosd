@@ -1,6 +1,5 @@
-# fix CMakeLists.txt to install to /usr/lib64 instead of /usr/lib
 diff --git a/src/elfhacks/CMakeLists.txt b/src/elfhacks/CMakeLists.txt
-index da9c820..b418e19 100644
+index da9c820..341e171 100644
 --- a/src/elfhacks/CMakeLists.txt
 +++ b/src/elfhacks/CMakeLists.txt
 @@ -1,3 +1,4 @@
@@ -13,10 +12,10 @@ index da9c820..b418e19 100644
                                            SOVERSION ${ELFHACKS_VERSION_MAJOR})
  INSTALL(TARGETS elfhacks
 -  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
-+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/glxosd
  )
 diff --git a/src/glinject/CMakeLists.txt b/src/glinject/CMakeLists.txt
-index 9a26bb6..f940ff5 100644
+index 9a26bb6..a9585d3 100644
 --- a/src/glinject/CMakeLists.txt
 +++ b/src/glinject/CMakeLists.txt
 @@ -1,3 +1,4 @@
@@ -31,10 +30,10 @@ index 9a26bb6..f940ff5 100644
 -  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
 -)
 \ No newline at end of file
-+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/glxosd
 +)
 diff --git a/src/glxosd-libsensors-support/CMakeLists.txt b/src/glxosd-libsensors-support/CMakeLists.txt
-index 5c010bc..55c7904 100644
+index 5c010bc..863039c 100644
 --- a/src/glxosd-libsensors-support/CMakeLists.txt
 +++ b/src/glxosd-libsensors-support/CMakeLists.txt
 @@ -1,3 +1,4 @@
@@ -47,10 +46,10 @@ index 5c010bc..55c7904 100644
                                            SOVERSION ${GLXOSD_VERSION_MAJOR})
  INSTALL(TARGETS glxosd-libsensors-support
 -  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
-+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/glxosd
  )
 diff --git a/src/glxosd-nvidia-support/CMakeLists.txt b/src/glxosd-nvidia-support/CMakeLists.txt
-index 4ec9faa..2362ca6 100644
+index 4ec9faa..07cd0a0 100644
 --- a/src/glxosd-nvidia-support/CMakeLists.txt
 +++ b/src/glxosd-nvidia-support/CMakeLists.txt
 @@ -1,3 +1,4 @@
@@ -63,10 +62,10 @@ index 4ec9faa..2362ca6 100644
                                            SOVERSION ${GLXOSD_VERSION_MAJOR})
  INSTALL(TARGETS glxosd-nvidia-support
 -  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
-+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/glxosd
  )
 diff --git a/src/glxosd/CMakeLists.txt b/src/glxosd/CMakeLists.txt
-index 4cbeb1e..1ca7315 100644
+index 4cbeb1e..0f2dc67 100644
 --- a/src/glxosd/CMakeLists.txt
 +++ b/src/glxosd/CMakeLists.txt
 @@ -1,3 +1,4 @@
@@ -79,5 +78,5 @@ index 4cbeb1e..1ca7315 100644
                                            SOVERSION ${GLXOSD_VERSION_MAJOR})
  INSTALL(TARGETS glxosd
 -  LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
-+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/${CMAKE_LIBRARY_ARCHITECTURE}/glxosd
++  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/glxosd
  )
