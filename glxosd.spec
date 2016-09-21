@@ -45,6 +45,7 @@ make %{?_smp_mflags} all
 
 %files
 %{_sysconfdir}/%{name}
+# TODO: permissions should be fixed in v3.2.1
 %attr(755, root, root) %{_bindir}/%{name}
 %{_libdir}/%{name}
 %{_datadir}/%{name}
