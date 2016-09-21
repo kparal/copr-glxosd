@@ -1,8 +1,8 @@
-%global     githash    9d07ca0
+%global     githash    21b9ef2
 %global     gitdate    20160921
 
 Name:     glxosd
-Version:  3.2.0
+Version:  3.2.1
 Release:  1.%{gitdate}git%{githash}%{?dist}
 Summary:  An OSD for OpenGL applications. Monitor your framerate in games.
 
@@ -45,8 +45,7 @@ make %{?_smp_mflags} all
 
 %files
 %{_sysconfdir}/%{name}
-# TODO: permissions should be fixed in v3.2.1
-%attr(755, root, root) %{_bindir}/%{name}
+%{_bindir}/%{name}
 %{_libdir}/%{name}
 %{_datadir}/%{name}
 %doc README.md
