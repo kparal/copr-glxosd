@@ -1,8 +1,8 @@
-%global     githash    21b9ef2
-%global     gitdate    20160921
+%global     githash    b53381a
+%global     gitdate    20170213
 
 Name:     glxosd
-Version:  3.2.1
+Version:  3.2.2
 Release:  1.%{gitdate}git%{githash}%{?dist}
 Summary:  An OSD for OpenGL applications. Monitor your framerate in games.
 
@@ -54,4 +54,5 @@ make %{?_smp_mflags} all
 
 %changelog
 * Sun Feb 21 2016 Kamil Páral <kparal@redhat.com> - 2.5.0-1.20160210git7f0886e
-- initial release. Use git to track future changes to the spec file.
+- initial release. Use git to track future changes to the spec file:
+  https://github.com/kparal/copr-glxosd
