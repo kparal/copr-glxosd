@@ -1,9 +1,11 @@
 %global     githash    b53381a
 %global     gitdate    20170213
+# https://superuser.com/questions/1091529/rpm-build-error-empty-files-file-debugfiles-list
+%global debug_package %{nil}
 
 Name:     glxosd
 Version:  3.2.2
-Release:  1.%{gitdate}git%{githash}%{?dist}
+Release:  2.%{gitdate}git%{githash}%{?dist}
 Summary:  An OSD for OpenGL applications. Monitor your framerate in games.
 
 License:  MIT
